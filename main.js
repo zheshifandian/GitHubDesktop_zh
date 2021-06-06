@@ -35,7 +35,7 @@ module.exports = (function (e) {
             }.bind(null, i)
           );
       return r;
-    }),
+    }), 
     (n.n = function (e) {
       var t =
         e && e.__esModule
@@ -3168,7 +3168,7 @@ module.exports = (function (e) {
           },
         },
         {
-          label: "&在GitHub上寻找帮助…",
+          label: "&GitHub帮助…",
           click() {
             r.shell
               .openExternal(
@@ -3189,7 +3189,7 @@ module.exports = (function (e) {
           },
         },
         {
-          label: "查看键盘快捷键",
+          label: "看键盘快捷键",
           click() {
             r.shell
               .openExternal(
@@ -3222,7 +3222,7 @@ module.exports = (function (e) {
             ...C,
             _,
             {
-              label: "&关于 GitHub 桌面版",
+              label: "&关于版本信息",
               click: f("show-about"),
               id: "about",
             },

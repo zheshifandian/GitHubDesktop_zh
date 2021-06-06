@@ -216,7 +216,7 @@ module.exports = (function (e) {
             u(t, "valueOf") && (e.valueOf = t.valueOf),
             e
           );
-        }
+        } 
         function d(e, t, n, r) {
           return Et(e, t, n, r, !0).utc();
         }
@@ -62108,7 +62108,7 @@ PERFORMANCE OF THIS SOFTWARE.
           ? w.createElement(
               "div",
               { className: "title" },
-              "Sorry, I can't find that pull request!"
+              "抱歉，找不到那个拉取请求!"
             )
           : this.props.isLoadingPullRequests
           ? w.createElement("div", { className: "title" }, "Hang tight")
@@ -62119,7 +62119,7 @@ PERFORMANCE OF THIS SOFTWARE.
               w.createElement(
                 "div",
                 { className: "no-prs" },
-                "No open pull requests in ",
+                "没有打开代码合并请求 ",
                 w.createElement(Om, null, this.props.repositoryName)
               )
             );
@@ -62129,34 +62129,34 @@ PERFORMANCE OF THIS SOFTWARE.
           ? w.createElement(
               "div",
               { className: "call-to-action" },
-              "Loading pull requests as fast as I can!"
+              "正在加载请求!"
             )
           : this.props.isOnDefaultBranch
           ? w.createElement(
               "div",
               { className: "call-to-action" },
-              "Would you like to",
+              "是否需要",
               " ",
               w.createElement(
                 _d,
                 { onClick: this.props.onCreateBranch },
-                "create a new branch"
+                "创建一个新分支"
               ),
               " ",
-              "and get going on your next project?"
+              "继续进行下个项目?"
             )
           : w.createElement(
               "div",
               { className: "call-to-action" },
-              "Would you like to",
+              "是否需要",
               " ",
               w.createElement(
                 _d,
                 { onClick: this.props.onCreatePullRequest },
-                "create a pull request"
+                "从当前分支"
               ),
               " ",
-              "from the current branch?"
+              "创建代码合并请求?"
             );
       }
     }
@@ -64876,13 +64876,13 @@ PERFORMANCE OF THIS SOFTWARE.
       }
       getOkButtonLabel() {
         return this.props.discardingAllChanges
-          ? "Discard all changes"
-          : "Discard changes";
+          ? "放弃所有更改"
+          : "放弃更改";
       }
       getDialogTitle() {
         return this.props.discardingAllChanges
-          ? "Confirm discard all changes"
-          : "Confirm discard changes";
+          ? "确认放弃所有更改"
+          : "确认放弃更改";
       }
       render() {
         const e = this.state.isDiscardingChanges;
@@ -64896,7 +64896,7 @@ PERFORMANCE OF THIS SOFTWARE.
             dismissable: !e,
             loading: e,
             disabled: e,
-            type: "warning",
+            type: "警告",
           },
           w.createElement(
             ig,
@@ -64905,8 +64905,8 @@ PERFORMANCE OF THIS SOFTWARE.
             w.createElement(
               "p",
               null,
-              "Changes can be restored by retrieving them from the ",
-              "Recycle Bin",
+              "可以通过从中检索更改来恢复更改",
+              "回收站",
               "."
             ),
             this.renderConfirmDiscardChanges()
@@ -64924,7 +64924,7 @@ PERFORMANCE OF THIS SOFTWARE.
       renderConfirmDiscardChanges() {
         return this.props.showDiscardChangesSetting
           ? w.createElement(qd, {
-              label: "Do not show this message again",
+              label: "不再显示该消息",
               value: this.state.confirmDiscardChanges ? $d.Off : $d.On,
               onChange: this.onConfirmDiscardChangesChanged,
             })
@@ -64935,9 +64935,9 @@ PERFORMANCE OF THIS SOFTWARE.
           ? w.createElement(
               "p",
               null,
-              "Are you sure you want to discard all ",
+              "确定放弃所有",
               this.props.files.length,
-              " changed files?"
+              "文件更改?"
             )
           : w.createElement(
               "div",
@@ -64945,7 +64945,7 @@ PERFORMANCE OF THIS SOFTWARE.
               w.createElement(
                 "p",
                 null,
-                "Are you sure you want to discard all changes to:"
+                "确定放弃所有更改:"
               ),
               w.createElement(
                 "ul",
@@ -64984,7 +64984,7 @@ PERFORMANCE OF THIS SOFTWARE.
       }
     }
     const Iy =
-      "Your browser will redirect you back to GitHub Desktop once you've signed in. If your browser asks for your permission to launch GitHub Desktop please allow it to.";
+      "登录后，浏览器会将重定向到GitHub Desktop。如果浏览器要求启动GitHub Desktop的许可证，请允许它执行以下操作：.";
     class Oy extends w.Component {
       constructor(e) {
         super(e),
@@ -65018,13 +65018,13 @@ PERFORMANCE OF THIS SOFTWARE.
           w.Fragment,
           null,
           w.createElement(Md, {
-            label: "Username or email address",
+            label: "用户名称和邮箱地址",
             disabled: e,
             autoFocus: !0,
             onValueChanged: this.onUsernameChange,
           }),
           w.createElement(Md, {
-            label: "Password",
+            label: "密码",
             type: "password",
             disabled: e,
             onValueChanged: this.onPasswordChange,
@@ -65051,7 +65051,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 Ud,
                 { type: "submit", disabled: e },
                 this.props.loading ? w.createElement(cp, null) : null,
-                " Sign in"
+                "登陆"
               )
             : null,
           this.props.additionalButtons,
@@ -65062,7 +65062,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   className: "forgot-password-link",
                   uri: this.props.forgotPasswordUrl,
                 },
-                "Forgot password?"
+                "忘记密码?"
               )
             : null
         );
@@ -65096,14 +65096,14 @@ PERFORMANCE OF THIS SOFTWARE.
                 w.createElement(
                   "p",
                   null,
-                  "GitHub now requires you to sign in with your browser."
+                  "GitHub现在要求使用浏览器登录."
                 ),
                 w.createElement("p", null, Iy)
               )
             : w.createElement(
                 "p",
                 null,
-                "Your GitHub Enterprise Server instance requires you to sign in with your browser."
+                "通过GitHub Enterprise Server实例使用浏览器登录."
               ),
           this.renderSignInWithBrowserButton(),
           this.props.additionalButtons
@@ -65117,7 +65117,7 @@ PERFORMANCE OF THIS SOFTWARE.
             className: "button-with-icon",
             onClick: this.signInWithBrowser,
           },
-          "Sign in using your browser",
+          "通过浏览器登陆",
           w.createElement(vh, { symbol: wh.linkExternal })
         );
       }
@@ -65151,7 +65151,7 @@ PERFORMANCE OF THIS SOFTWARE.
           w.createElement(
             "h1",
             { className: "welcome-title" },
-            "Welcome to GitHub Desktop"
+            "GitHub Desktop 欢迎向导"
           ),
           this.props.loadingBrowserAuth
             ? w.createElement("p", null, Iy)
@@ -65161,12 +65161,12 @@ PERFORMANCE OF THIS SOFTWARE.
                 w.createElement(
                   "p",
                   { className: "welcome-text" },
-                  "GitHub Desktop is a seamless way to contribute to projects on GitHub and GitHub Enterprise Server. Sign in below to get started with your existing projects."
+                  "GitHub Desktop，开源及私有项目托管平台的桌面版客户端，用于GIT项目代码托管，管理仓库版本，控制存储分支，本地同步推送等操作。"
                 ),
                 w.createElement(
                   "p",
                   { className: "welcome-text" },
-                  "New to GitHub?",
+                  "新建 GitHub?",
                   " ",
                   w.createElement(
                     _d,
@@ -65174,7 +65174,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       uri: "https://github.com/join?source=github-desktop",
                       className: "create-account-link",
                     },
-                    "Create your free account."
+                    "创建免费帐户."
                   )
                 )
               ),
@@ -65190,19 +65190,19 @@ PERFORMANCE OF THIS SOFTWARE.
                 onClick: this.signInWithBrowser,
               },
               this.props.loadingBrowserAuth && w.createElement(cp, null),
-              "Sign in to GitHub.com",
+              "登陆 GitHub.com",
               w.createElement(vh, { symbol: wh.linkExternal })
             ),
             this.props.loadingBrowserAuth
               ? w.createElement(
                   Ud,
                   { onClick: this.cancelBrowserAuth },
-                  "Cancel"
+                  "取消"
                 )
               : w.createElement(
                   Ud,
                   { onClick: this.signInToEnterprise },
-                  "Sign in to GitHub Enterprise Server"
+                  "登录GitHub Enterprise Serverr"
                 )
           ),
           w.createElement(
@@ -65211,7 +65211,7 @@ PERFORMANCE OF THIS SOFTWARE.
             w.createElement(
               _d,
               { className: "skip-button", onClick: this.skip },
-              "Skip this step"
+              "跳过欢迎向导"
             )
           )
         );
@@ -65246,7 +65246,7 @@ PERFORMANCE OF THIS SOFTWARE.
             My,
             { onSubmit: this.signIn },
             w.createElement(Md, {
-              label: "Authentication code",
+              label: "验证码",
               disabled: e,
               autoFocus: !0,
               onValueChanged: this.onOTPChange,
@@ -65259,7 +65259,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 Ud,
                 { type: "submit", disabled: t },
                 this.props.loading ? w.createElement(cp, null) : null,
-                " Verify"
+                "安全验证"
               ),
               this.props.additionalButtons
             )
@@ -65285,7 +65285,7 @@ PERFORMANCE OF THIS SOFTWARE.
           My,
           { onSubmit: this.onSubmit },
           w.createElement(Md, {
-            label: "Enterprise Server address",
+            label: "Enterprise Server 地址",
             autoFocus: !0,
             disabled: e,
             onValueChanged: this.onServerAddressChanged,
@@ -65301,7 +65301,7 @@ PERFORMANCE OF THIS SOFTWARE.
               Ud,
               { type: "submit", disabled: t },
               this.props.loading ? w.createElement(cp, null) : null,
-              " Continue"
+              "继续"
             ),
             this.props.additionalButtons
           )
@@ -65388,12 +65388,12 @@ PERFORMANCE OF THIS SOFTWARE.
               w.createElement(
                 "h1",
                 { className: "welcome-title" },
-                "Sign in to your GitHub Enterprise Server"
+                "登陆 GitHub Enterprise Server"
               ),
               w.createElement(
                 By,
                 { signInState: e, dispatcher: this.props.dispatcher },
-                w.createElement(Ud, { onClick: this.cancel }, "Cancel")
+                w.createElement(Ud, { onClick: this.cancel }, "取消")
               )
             )
           : null;
@@ -65418,7 +65418,7 @@ PERFORMANCE OF THIS SOFTWARE.
           w.createElement(
             "p",
             null,
-            "Failed to update Git configuration file. A lock file already exists at",
+            "无法更新Git配置文件，文件已存在被锁定",
             " ",
             w.createElement(Om, null, this.props.lockFilePath),
             "."
@@ -65426,15 +65426,15 @@ PERFORMANCE OF THIS SOFTWARE.
           w.createElement(
             "p",
             null,
-            "This can happen if another tool is currently modifying the Git configuration or if a Git process has terminated earlier without cleaning up the lock file. Do you want to",
+            "如果当前有其他工具正在修改Git配置，或者Git进程在不清理锁定文件的情况下被终止，则可能会发生这种情况。确定",
             " ",
             w.createElement(
               _d,
               { onClick: this.onDeleteLockFile },
-              "delete the lock file"
+              "删除锁文件"
             ),
             " ",
-            "and try again?"
+            "然后重试？"
           )
         );
       }
@@ -65557,15 +65557,15 @@ PERFORMANCE OF THIS SOFTWARE.
             My,
             { className: "sign-in-form", onSubmit: this.save },
             w.createElement(Md, {
-              label: "Name",
-              placeholder: "Your Name",
+              label: "名称",
+              placeholder: "你的名称",
               value: this.state.name,
               onValueChanged: this.onNameChange,
             }),
             w.createElement(Md, {
-              type: "email",
-              label: "Email",
-              placeholder: "your-email@example.com",
+              type: "邮箱",
+              label: "邮箱地址",
+              placeholder: "www.423down.com",
               value: this.state.email,
               onValueChanged: this.onEmailChange,
             }),
@@ -65574,8 +65574,8 @@ PERFORMANCE OF THIS SOFTWARE.
               null,
               w.createElement(
                 Ud,
-                { type: "submit" },
-                this.props.saveLabel || "Save"
+                { type: "提交" },
+                this.props.saveLabel || "保存"
               ),
               this.props.children
             )
@@ -65612,21 +65612,21 @@ PERFORMANCE OF THIS SOFTWARE.
           w.createElement(
             "h1",
             { className: "welcome-title" },
-            "Configure Git"
+            "配置Git"
           ),
           w.createElement(
             "p",
             { className: "welcome-text" },
-            "This is used to identify the commits you create. Anyone will be able to see this information if you publish commits."
+            "配置GIT可以用于公开您创建的提交。如果您发布提交，任何人都将能够看到此信息."
           ),
           w.createElement(
             Uy,
             {
               accounts: this.props.accounts,
               onSave: this.continue,
-              saveLabel: "Continue",
+              saveLabel: "继续",
             },
-            w.createElement(Ud, { onClick: this.cancel }, "Cancel")
+            w.createElement(Ud, { onClick: this.cancel }, "取消")
           )
         );
       }
@@ -65655,13 +65655,13 @@ PERFORMANCE OF THIS SOFTWARE.
           w.createElement(
             "h1",
             { className: "welcome-title" },
-            "Make GitHub Desktop better!"
+            "体验改进"
           ),
           w.createElement(
             "p",
             null,
-            "Would you like to help us improve GitHub Desktop by periodically submitting ",
-            w.createElement(_d, { uri: oh }, "usage stats"),
+            "是否定期发送匿名使用数据来帮助我们改进GitHub Desktop?",
+            w.createElement(_d, { uri: oh }, "关于使用情况统计"),
             "?"
           ),
           w.createElement(
@@ -65671,7 +65671,7 @@ PERFORMANCE OF THIS SOFTWARE.
               Pd,
               null,
               w.createElement(qd, {
-                label: "Yes, submit periodic usage stats",
+                label: "确定",
                 value: this.state.newOptOutValue ? $d.Off : $d.On,
                 onChange: this.onChange,
               })
@@ -65679,8 +65679,8 @@ PERFORMANCE OF THIS SOFTWARE.
             w.createElement(
               Pd,
               { className: "actions" },
-              w.createElement(Ud, { type: "submit" }, "Finish"),
-              w.createElement(Ud, { onClick: this.cancel }, "Cancel")
+              w.createElement(Ud, { type: "submit" }, "完成"),
+              w.createElement(Ud, { onClick: this.cancel }, "取消")
             )
           )
         );
@@ -69399,7 +69399,7 @@ PERFORMANCE OF THIS SOFTWARE.
           (this.renderGroupHeader = (e) => {
             let t = e;
             return (
-              "your-repositories" === e && (t = "Your repositories"),
+              "your-repositories" === e && (t = "我的储存库"),
               w.createElement(
                 "div",
                 {
@@ -70580,94 +70580,18 @@ PERFORMANCE OF THIS SOFTWARE.
           (this.updateStoreEventHandle = null));
       }
       renderUpdateButton() {
-        const e = this.state.updateState.status;
-        switch (e) {
-          case Te.UpdateReady:
-            return w.createElement(
-              Pd,
-              null,
-              w.createElement(
-                Ud,
-                { onClick: this.onQuitAndInstall },
-                "Quit and Install Update"
-              )
-            );
-          case Te.UpdateNotAvailable:
-          case Te.CheckingForUpdates:
-          case Te.UpdateAvailable:
-            const t = e !== Te.UpdateNotAvailable;
-            return w.createElement(
-              Pd,
-              null,
-              w.createElement(
-                Ud,
-                { disabled: t, onClick: this.props.onCheckForUpdates },
-                "检查更新"
-              )
-            );
-          default:
-            return X(0, "Unknown update status " + e);
-        }
       }
       renderCheckingForUpdate() {
-        return w.createElement(
-          Pd,
-          { className: "update-status" },
-          w.createElement(cp, null),
-          w.createElement("span", null, "检查更新中…")
-        );
       }
       renderUpdateAvailable() {
-        return w.createElement(
-          Pd,
-          { className: "update-status" },
-          w.createElement(cp, null),
-          w.createElement("span", null, "Downloading update…")
-        );
       }
       renderUpdateNotAvailable() {
-        const e = this.state.updateState.lastSuccessfulCheck;
-        return e
-          ? w.createElement(
-              "p",
-              { className: "update-status" },
-              "你已是最新版本(最后一次检查",
-              " ",
-              w.createElement(Jp, { date: e }),
-              ")"
-            )
-          : null;
       }
       renderUpdateReady() {
-        return w.createElement(
-          "p",
-          { className: "update-status" },
-          "An update has been downloaded and is ready to be installed."
-        );
       }
       renderUpdateDetails() {
-        const e = this.state.updateState;
-        switch (e.status) {
-          case Te.CheckingForUpdates:
-            return this.renderCheckingForUpdate();
-          case Te.UpdateAvailable:
-            return this.renderUpdateAvailable();
-          case Te.UpdateNotAvailable:
-            return this.renderUpdateNotAvailable();
-          case Te.UpdateReady:
-            return this.renderUpdateReady();
-          default:
-            return X(e.status, "Unknown update status " + e.status);
-        }
       }
       renderUpdateErrors() {
-        return this.state.updateState.lastSuccessfulCheck
-          ? null
-          : w.createElement(
-              ag,
-              null,
-              "Couldn't determine the last time an update check was performed. You may be running an old version. Please try manually checking for updates and contact GitHub Support if the problem persists"
-            );
       }
       render() {
         const e = this.props.applicationName,
@@ -73054,7 +72978,7 @@ PERFORMANCE OF THIS SOFTWARE.
               Pd,
               { className: "selection" },
               w.createElement(qd, {
-                label: "Help GitHub Desktop improve by submitting usage stats",
+                label: "通过提交使用情况统计信息来帮助GitHub Desktop进行改进",
                 value: this.state.optOutOfUsageTracking ? $d.Off : $d.On,
                 onChange: this.onReportingOptOutChanged,
               })
@@ -73064,8 +72988,8 @@ PERFORMANCE OF THIS SOFTWARE.
             lg,
             null,
             w.createElement(cg, {
-              okButtonText: "Continue",
-              cancelButtonText: "More info",
+              okButtonText: "继续",
+              cancelButtonText: "更多信息",
               onCancelButtonClick: this.viewMoreInfo,
             })
           )
@@ -74553,7 +74477,7 @@ PERFORMANCE OF THIS SOFTWARE.
           w.createElement(
             lg,
             null,
-            w.createElement(cg, { okButtonText: "Continue" })
+            w.createElement(cg, { okButtonText: "继续" })
           )
         );
       }
