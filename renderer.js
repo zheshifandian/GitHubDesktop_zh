@@ -65532,7 +65532,7 @@ PERFORMANCE OF THIS SOFTWARE.
           n = new La(
             this.state.name,
             this.state.name.slice(0, 7),
-            "Fix all the things",
+            "解决所有问题",
             "",
             t,
             t,
@@ -65583,7 +65583,7 @@ PERFORMANCE OF THIS SOFTWARE.
           w.createElement(
             "div",
             { id: "commit-list", className: "commit-list-example" },
-            w.createElement("div", { className: "header" }, "Example commit"),
+            w.createElement("div", { className: "header" }, "登陆用户"),
             w.createElement(eg, {
               commit: n,
               emoji: r,
@@ -65660,7 +65660,7 @@ PERFORMANCE OF THIS SOFTWARE.
           w.createElement(
             "p",
             null,
-            "是否定期发送匿名使用数据来帮助我们改进GitHub Desktop?",
+            "是否定时发送匿名数据帮助官方改进GitHub Desktop?",
             w.createElement(_d, { uri: oh }, "关于使用情况统计"),
             "?"
           ),
